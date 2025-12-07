@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avinash Kumar Deepak | Software Developer</title>
+    <meta name="description" content="Portfolio of Avinash Kumar Deepak - AIDS Student, Software Developer & Open Source Contributor">
+    <meta name="keywords" content="developer, programmer, open source, web developer, software engineer">
+    
+    <!-- Preload fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-text">
+                <span class="loader-char">&lt;</span>
+                <span class="loader-word">Loading</span>
+                <span class="loader-char">/&gt;</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-bracket">&lt;</span>
+                <span class="brand-name">Avinash</span>
+                <span class="brand-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name glitch" data-text="Avinash Kumar">Avinash Kumar</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-prefix">I'm a</span>
+                    <div class="typed-container">
+                        <span class="typed-text" id="typed"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+                </div>
+                <p class="hero-description">
+                    Crafting elegant solutions through code. Passionate about building innovative projects, 
+                    contributing to open-source, and exploring the frontiers of modern web technologies.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Open Source</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Commits</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://github.com/avinxshKD" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub Profile</span>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/avinxshKD" target="_blank" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/avinash-kumar-deepak-089225279/" target="_blank" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:avinash8655279@gmail.com" class="social-link" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">developer.js</span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+    <span class="code-property">name</span>: <span class="code-string">"Avinash Kumar"</span>,
+    <span class="code-property">role</span>: <span class="code-string">"Software Developer"</span>,
+    <span class="code-property">location</span>: <span class="code-string">"India"</span>,
+    <span class="code-property">skills</span>: [<span class="code-string">"Frontend"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"Python"</span>],
+    <span class="code-property">passions</span>: [<span class="code-string">"Open Source"</span>, <span class="code-string">"Problem Solving"</span>],
+    <span class="code-property">coffee</span>: <span class="code-boolean">true</span>,
+    
+    <span class="code-method">code</span>: <span class="code-keyword">function</span>() {
+        <span class="code-keyword">return</span> <span class="code-string">"Building the future..."</span>;
+    }
+};
+
+<span class="code-variable">developer</span>.<span class="code-method">code</span>(); <span class="code-comment">// Let's go! 🚀</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="frame-corner top-left"></div>
+                        <div class="frame-corner top-right"></div>
+                        <div class="frame-corner bottom-left"></div>
+                        <div class="frame-corner bottom-right"></div>
+                        <div class="image-placeholder dev-illustration">
+                            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background Circle -->
+                                <circle cx="250" cy="250" r="200" fill="url(#gradient1)" opacity="0.1"/>
+                                
+                                <!-- Laptop Base -->
+                                <rect x="120" y="300" width="260" height="15" rx="5" fill="#334155"/>
+                                <rect x="100" y="315" width="300" height="8" rx="4" fill="#1e293b"/>
+                                
+                                <!-- Laptop Screen -->
+                                <rect x="130" y="180" width="240" height="120" rx="8" fill="#1e293b"/>
+                                <rect x="140" y="190" width="220" height="100" rx="4" fill="#0f172a"/>
+                                
+                                <!-- Code Lines on Screen -->
+                                <rect x="155" y="205" width="60" height="6" rx="3" fill="#c792ea"/>
+                                <rect x="225" y="205" width="80" height="6" rx="3" fill="#82aaff"/>
+                                <rect x="155" y="220" width="40" height="6" rx="3" fill="#c3e88d"/>
+                                <rect x="205" y="220" width="100" height="6" rx="3" fill="#f78c6c"/>
+                                <rect x="155" y="235" width="90" height="6" rx="3" fill="#89ddff"/>
+                                <rect x="255" y="235" width="50" height="6" rx="3" fill="#c792ea"/>
+                                <rect x="155" y="250" width="70" height="6" rx="3" fill="#ffcb6b"/>
+                                <rect x="235" y="250" width="60" height="6" rx="3" fill="#82aaff"/>
+                                <rect x="155" y="265" width="45" height="6" rx="3" fill="#c3e88d"/>
+                                <rect x="210" y="265" width="85" height="6" rx="3" fill="#f78c6c"/>
+                                
+                                <!-- Person - Head -->
+                                <circle cx="250" cy="100" r="45" fill="#d4a574"/>
+                                
+                                <!-- Hair -->
+                                <ellipse cx="250" cy="70" rx="42" ry="30" fill="#1e293b"/>
+                                <ellipse cx="215" cy="85" rx="10" ry="15" fill="#1e293b"/>
+                                <ellipse cx="285" cy="85" rx="10" ry="15" fill="#1e293b"/>
+                                
+                                <!-- Eyes -->
+                                <ellipse cx="232" cy="100" rx="6" ry="7" fill="#1e293b"/>
+                                <ellipse cx="268" cy="100" rx="6" ry="7" fill="#1e293b"/>
+                                <circle cx="234" cy="98" r="2" fill="white"/>
+                                <circle cx="270" cy="98" r="2" fill="white"/>
+                                
+                                <!-- Smile -->
+                                <path d="M 235 118 Q 250 130 265 118" stroke="#1e293b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                
+                                <!-- Body - Hoodie -->
+                                <path d="M 180 145 Q 175 180 170 220 L 170 300 L 330 300 L 330 220 Q 325 180 320 145 Q 290 135 250 135 Q 210 135 180 145" fill="#6366f1"/>
+                                
+                                <!-- Hoodie Details -->
+                                <path d="M 230 145 L 230 200" stroke="#4f46e5" stroke-width="3" fill="none"/>
+                                <path d="M 270 145 L 270 200" stroke="#4f46e5" stroke-width="3" fill="none"/>
+                                <ellipse cx="250" cy="150" rx="25" ry="15" fill="none" stroke="#4f46e5" stroke-width="2"/>
+                                
+                                <!-- Arms -->
+                                <path d="M 170 200 Q 140 240 150 280 L 165 280 Q 175 250 185 220" fill="#6366f1"/>
+                                <path d="M 330 200 Q 360 240 350 280 L 335 280 Q 325 250 315 220" fill="#6366f1"/>
+                                
+                                <!-- Hands -->
+                                <circle cx="155" cy="285" r="15" fill="#d4a574"/>
+                                <circle cx="345" cy="285" r="15" fill="#d4a574"/>
+                                
+                                <!-- Floating Elements -->
+                                <g class="floating">
+                                    <circle cx="80" cy="150" r="8" fill="#6366f1" opacity="0.6"/>
+                                    <circle cx="420" cy="180" r="6" fill="#8b5cf6" opacity="0.6"/>
+                                    <circle cx="100" cy="350" r="5" fill="#06b6d4" opacity="0.6"/>
+                                    <circle cx="400" cy="320" r="7" fill="#10b981" opacity="0.6"/>
+                                </g>
+                                
+                                <!-- Code Symbols -->
+                                <text x="70" y="220" fill="#6366f1" font-family="monospace" font-size="24" opacity="0.7">&lt;/&gt;</text>
+                                <text x="390" y="250" fill="#8b5cf6" font-family="monospace" font-size="20" opacity="0.7">{ }</text>
+                                
+                                <defs>
+                                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6366f1"/>
+                                        <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="highlight-text">
+                            I'm an <span class="text-gradient">AI & Data Science</span> student with an insatiable curiosity for 
+                            building software that makes a difference.
+                        </p>
+                        <p>
+                            My journey in tech started with a simple "Hello World" and has evolved into a passion for 
+                            creating elegant, efficient, and user-friendly applications. I thrive on challenges and 
+                            believe that every bug is just a feature waiting to be understood.
+                        </p>
+                        <p>
+                            When I'm not pushing code to GitHub, you'll find me exploring new technologies, 
+                            contributing to open-source projects, or diving deep into documentation 
+                            (yes, I actually read them!).
+                        </p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Name</span>
+                            <span class="detail-value">Avinash Kumar</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">B.Tech in AIDS</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value">avinash8655279@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Focus</span>
+                            <span class="detail-value">Full-Stack Development, AI/ML & Open Source</span>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Get In Touch</span>
+                        </a>
+                        <a href="#" class="btn btn-outline resume-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <span class="section-tag">&lt;/about&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            
+            <div class="skills-wrapper">
+                <!-- Skills Tabs -->
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-tab="frontend">
+                        <i class="fas fa-palette"></i>
+                        <span>Frontend</span>
+                    </button>
+                    <button class="tab-btn" data-tab="languages">
+                        <i class="fas fa-code"></i>
+                        <span>Languages</span>
+                    </button>
+                    <button class="tab-btn" data-tab="tools">
+                        <i class="fas fa-tools"></i>
+                        <span>Tools</span>
+                    </button>
+                    <button class="tab-btn" data-tab="learning">
+                        <i class="fas fa-rocket"></i>
+                        <span>Learning</span>
+                    </button>
+                </div>
+
+                <!-- Skills Content -->
+                <div class="skills-content">
+                    <div class="tab-content active" id="frontend">
+                        <div class="skills-grid">
+                            <div class="skill-card" data-skill="90">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>HTML5</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>CSS3 / SCSS</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="80">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="75">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>React.js</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="70">
+                                <div class="skill-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Responsive Design</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="65">
+                                <div class="skill-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Tailwind / Bootstrap</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="70">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>TypeScript</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="languages">
+                        <div class="skills-grid">
+                            <div class="skill-card" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Java</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="80">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="75">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>C / C++</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="70">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>SQL</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tools">
+                        <div class="skills-grid">
+                            <div class="skill-card" data-skill="90">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Git</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="85">
+                                <div class="skill-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>GitHub</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="80">
+                                <div class="skill-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Command Line</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="75">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>VS Code</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-card" data-skill="70">
+                                <div class="skill-icon">
+                                    <i class="fab fa-npm"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>npm / yarn</h4>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="--progress: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="learning">
+                        <div class="skills-grid">
+                            <div class="skill-card learning">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Node.js</h4>
+                                    <span class="learning-badge">Learning</span>
+                                </div>
+                            </div>
+                            <div class="skill-card learning">
+                                <div class="skill-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Machine Learning</h4>
+                                    <span class="learning-badge">Learning</span>
+                                </div>
+                            </div>
+                            <div class="skill-card learning">
+                                <div class="skill-icon">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Docker</h4>
+                                    <span class="learning-badge">Exploring</span>
+                                </div>
+                            </div>
+                            <div class="skill-card learning">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Cloud (AWS/Azure)</h4>
+                                    <span class="learning-badge">Next</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <span class="section-tag">&lt;/skills&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Things I've built</p>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="opensource">Open Source</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="project-btn" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/avinxshKD" target="_blank" class="project-btn" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder-img">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Web App</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">Project Name</h3>
+                        <p class="project-description">
+                            A brief description of what this project does, the problem it solves, and what makes it unique.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-star"></i> 12</span>
+                            <span><i class="fas fa-code-branch"></i> 5</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-category="opensource">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="project-btn" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/avinxshKD" target="_blank" class="project-btn" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder-img opensource">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Open Source</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">Open Source Contribution</h3>
+                        <p class="project-description">
+                            Contributed to a popular open-source project, fixing bugs and adding new features.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-star"></i> Contributor</span>
+                            <span><i class="fas fa-code-branch"></i> PRs Merged</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="project-btn" title="View Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/avinxshKD" target="_blank" class="project-btn" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder-img web">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Web App</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                        <h3 class="project-title">Full Stack Project</h3>
+                        <p class="project-description">
+                            A complete web application with frontend and backend integration, featuring modern design.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-star"></i> 15</span>
+                            <span><i class="fas fa-code-branch"></i> 7</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-cta">
+                <a href="https://github.com/avinxshKD" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    <span>View All Projects on GitHub</span>
+                </a>
+            </div>
+
+            <div class="section-footer">
+                <span class="section-tag">&lt;/projects&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Timeline Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">My Journey</h2>
+                <p class="section-subtitle">Education & Experience</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - 2027</div>
+                        <h3 class="timeline-title">B.Tech in Artificial Intelligence & Data Science</h3>
+                        <p class="timeline-subtitle">University Name</p>
+                        <p class="timeline-description">
+                            Currently pursuing my degree in AI & Data Science, focusing on software development, 
+                            machine learning fundamentals, and web technologies.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Data Science</span>
+                            <span>AI/ML</span>
+                            <span>Programming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">Open Source Contributor</h3>
+                        <p class="timeline-subtitle">Various Projects</p>
+                        <p class="timeline-description">
+                            Active contributor to open-source projects. Learning from the community, 
+                            submitting PRs, fixing bugs, and collaborating with developers worldwide.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">Started Web Development</h3>
+                        <p class="timeline-subtitle">Self-Learning Journey</p>
+                        <p class="timeline-description">
+                            Began learning frontend development, mastering HTML, CSS, JavaScript, and React. 
+                            Built multiple projects to solidify understanding.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">The Journey Continues...</div>
+                        <h3 class="timeline-title">What's Next?</h3>
+                        <p class="timeline-subtitle">Always Learning</p>
+                        <p class="timeline-description">
+                            Excited to learn backend development, cloud technologies, and contribute to 
+                            larger open-source projects. Currently strengthening my DSA skills for problem-solving. Open to internships and opportunities!
+                        </p>
+                        <div class="timeline-tags">
+                            <span>DSA</span>
+                            <span>Node.js</span>
+                            <span>Cloud</span>
+                            <span>DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <span class="section-tag">&lt;/experience&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-text">
+                        <h3>Let's talk about everything!</h3>
+                        <p>
+                            Have a project in mind? Looking for a developer? Want to collaborate on 
+                            open-source? Or just want to say hi? My inbox is always open!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-cards">
+                        <a href="mailto:avinash8655279@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">avinash8655279@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/avinxshKD" target="_blank" class="contact-card">
+                            <div class="contact-icon github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">@avinxshKD</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/avinash-kumar-deepak-089225279/" target="_blank" class="contact-card">
+                            <div class="contact-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">Avinash Kumar</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <span class="section-tag">&lt;/contact&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-bracket">&lt;</span>
+                    <span class="brand-name">Avinash</span>
+                    <span class="brand-bracket">/&gt;</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/avinxshKD" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/avinash-kumar-deepak-089225279/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:avinash8655279@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 All rights reserved.</p>
+                <p class="visitor-count">
+                    <i class="fas fa-eye"></i>
+                    <span id="visitorCount">Loading...</span> visitors
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
