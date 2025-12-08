@@ -1,7 +1,3 @@
-/* ========================================
-   ADVANCED PORTFOLIO - JAVASCRIPT
-   ======================================== */
-
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
@@ -18,10 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initVisitorCounter();
 });
-
-/* ========================================
-   PRELOADER
-   ======================================== */
 function initPreloader() {
     const preloader = document.querySelector('.preloader');
     
@@ -32,10 +24,6 @@ function initPreloader() {
         }, 1500);
     });
 }
-
-/* ========================================
-   CUSTOM CURSOR
-   ======================================== */
 function initCustomCursor() {
     const cursor = document.querySelector('.cursor');
     const follower = document.querySelector('.cursor-follower');
@@ -86,10 +74,6 @@ function initCustomCursor() {
         });
     });
 }
-
-/* ========================================
-   PARTICLE BACKGROUND
-   ======================================== */
 function initParticles() {
     const canvas = document.getElementById('particles');
     if (!canvas) return;
@@ -172,10 +156,6 @@ function initParticles() {
         createParticles();
     });
 }
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
 function initNavigation() {
     const navbar = document.querySelector('.navbar');
     const hamburger = document.getElementById('hamburger');
@@ -249,10 +229,6 @@ function initNavigation() {
         });
     });
 }
-
-/* ========================================
-   THEME TOGGLE
-   ======================================== */
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     
@@ -274,10 +250,6 @@ function initThemeToggle() {
         localStorage.setItem('theme', newTheme);
     });
 }
-
-/* ========================================
-   TYPING EFFECT
-   ======================================== */
 function initTypingEffect() {
     const typedElement = document.getElementById('typed');
     if (!typedElement) return;
@@ -323,10 +295,6 @@ function initTypingEffect() {
     
     setTimeout(type, 1000);
 }
-
-/* ========================================
-   COUNTER ANIMATION
-   ======================================== */
 function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
     
@@ -361,10 +329,6 @@ function initCounterAnimation() {
     
     counters.forEach(counter => observer.observe(counter));
 }
-
-/* ========================================
-   SKILLS TABS
-   ======================================== */
 function initSkillsTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -398,10 +362,6 @@ function initSkillsTabs() {
         });
     });
 }
-
-/* ========================================
-   PROJECT FILTERS
-   ======================================== */
 function initProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
@@ -428,10 +388,6 @@ function initProjectFilters() {
         });
     });
 }
-
-/* ========================================
-   SCROLL ANIMATIONS
-   ======================================== */
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
         '.section-header, .about-grid, .skills-wrapper, .project-card, ' +
@@ -460,10 +416,6 @@ function initScrollAnimations() {
         observer.observe(el);
     });
 }
-
-/* ========================================
-   BACK TO TOP
-   ======================================== */
 function initBackToTop() {
     const backToTop = document.getElementById('backToTop');
     
@@ -482,10 +434,6 @@ function initBackToTop() {
         });
     });
 }
-
-/* ========================================
-   CONTACT FORM
-   ======================================== */
 function initContactForm() {
     const form = document.getElementById('contactForm');
     
@@ -517,10 +465,6 @@ function initContactForm() {
         }, 3000);
     });
 }
-
-/* ========================================
-   VISITOR COUNTER
-   ======================================== */
 function initVisitorCounter() {
     const visitorCount = document.getElementById('visitorCount');
     if (!visitorCount) return;
@@ -556,19 +500,13 @@ function initVisitorCounter() {
     
     observer.observe(visitorCount);
 }
-
-/* ========================================
-   EASTER EGG
-   ======================================== */
 console.log('%c👋 Hey there, curious developer!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
 console.log('%c📧 Contact: avinash8655279@gmail.com', 'color: #8b5cf6; font-size: 14px;');
 console.log('%c🚀 GitHub: github.com/avinxshKD', 'color: #06b6d4; font-size: 14px;');
 console.log('%c💡 Built with passion and lots of coffee ☕', 'color: #10b981; font-size: 12px;');
-
 // Konami Code Easter Egg
 let konamiCode = [];
 const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
 document.addEventListener('keydown', (e) => {
     konamiCode.push(e.key);
     konamiCode = konamiCode.slice(-10);
@@ -580,7 +518,6 @@ document.addEventListener('keydown', (e) => {
         }, 5000);
     }
 });
-
 // Add rainbow animation
 const style = document.createElement('style');
 style.textContent = `
