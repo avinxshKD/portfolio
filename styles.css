@@ -820,6 +820,18 @@ a {
     padding: 1rem;
     background: var(--bg-secondary);
 }
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: grayscale(0);
+}
+.image-frame:hover .profile-photo {
+    transform: scale(1.05);
+    filter: grayscale(0) brightness(1.05);
+}
 .dev-illustration svg {
     width: 100%;
     height: 100%;
